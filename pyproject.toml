@@ -1,0 +1,13 @@
+[project]
+name = "ctseg"
+version = "0.1.0"
+description = "Interactive CT segmentation and ROI tools (core library)"
+requires-python = ">=3.9"
+dependencies = ["numpy", "scipy", "scikit-image", "tifffile"]
+
+[project.optional-dependencies]
+gui = ["napari[all]", "magicgui"]
+dev = ["pytest", "matplotlib"]
+
+[tool.setuptools.packages.find]
+include = ["ctseg*"]
